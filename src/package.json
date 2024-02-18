@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.259",
+    "@types/webpack-env": "^1.18.4"
+  }
+}

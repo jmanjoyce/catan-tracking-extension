@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Hello Extensions",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "action": {
+      "default_popup": "views/mainpopup.html",
+      "default_icon": "assets/catan.png"
+    },
+    "permissions": [
+      "webNavigation",
+      "activeTab",
+      "debugger",
+      "storage"
+    ],
+    "content_scripts": [
+        {
+          "js": ["dist/content.js"],
+          "matches": [
+            "https://developer.chrome.com/docs/extensions/*",
+            "https://developer.chrome.com/docs/webstore/*",
+            "https://colonist.io/*"
+          ],
+          "run_at": "document_idle"
+        }
+      ],
+      "background": {
+        "service_worker": "dist/background.js"
+      }
+  }
